@@ -51,6 +51,10 @@ body {
     min-width: 1350px;
 }
 
+.hidden{
+    display: none;
+}
+
 .block{
 	width: 1310px;
 	margin: auto;
@@ -137,6 +141,20 @@ header p {
     box-sizing: border-box;
     margin: auto;
 }
+.catalog-dropdown{
+    position: absolute;
+    display: none;
+    background: #fff;
+    width: 100%;
+    color: #000;
+    line-height: 40px;
+    padding: 0 10px;
+}
+#catalog:checked + .catalog-dropdown{
+    display: block;
+}
+
+
 
 .catalog-buttom {
 	color: #fff;
@@ -332,8 +350,7 @@ header p {
 }
 .news-item {
 	width: 80%;
-	margin: auto;
-	margin-top: 35px;
+	margin:35px auto 20px;
 }
 .news-text-top {
 	font-size: 24px;
