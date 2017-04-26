@@ -43,9 +43,41 @@ table {
 }
 /* Reset end*/
 
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 300;
+    src: url(fonts/MuseoSansCyrl100.otf);/* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 300;
+    font-style: italic;
+    src: url(fonts/Museo Sans Cyrl 300 it.ttf);/* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 300;
+    src: url(fonts/Museo Sans Cyrl 300.otf);/* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 500;
+    src: url(fonts/MuseoSansCyrl500.otf);/* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 700;
+    src: url(fonts/MuseoSansCyrl700.otf);/* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Museo Sans"; /* Имя шрифта */
+    font-weight: 900;
+    src: url(fonts/MuseoSansCyrl900.otf);/* Путь к файлу со шрифтом */
+}
+
 body {
 	font-size: 14px;
-	font-family: "Arial";
+	font-family: "Museo Sans";
 	line-height: 20px;
 	background-color: #f1f1f1;
     min-width: 1350px;
@@ -201,9 +233,18 @@ header p {
     border-radius: 2px 0 0 2px;
     color: #aaaaaa;
     font-size: 16px;
+    vertical-align: top;
+    padding-right: 20px;
  }
 .search-text:focus {
     outline: none;
+}
+button#dropdownMenu1{
+    background-image: none;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding-right: 20px;
 }
 .search-category {
 	position: relative;
@@ -222,8 +263,8 @@ header p {
     display: inline-block;
     width: 7px;
     height: 7px;
-    bottom: 8px;
-    right: -6px;
+    right: 0;
+    top: 11px;
     border-left: 1px solid #c5c5c5;
     border-bottom: 1px solid #c5c5c5;
     transform: rotate(-45deg);
@@ -308,42 +349,48 @@ header p {
 
 .promo-block {
 	position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+}
+.promo-block  .col-md-4{
+	padding-left:0;
+	padding-right: 20px;
+}
+.promo-block  .col-md-4:nth-child(3n){
+	padding-right: 0;
+}
+.promo-block.row{
+	margin: 0;
 }
 
 .promo-block-item {
 	background: #fff;
 	border: 1px solid #d1d1d1;
-	flex-basis: calc(100% / 3 - 40px);
+	box-sizing: border-box;
 }
-
+.social-block {
+	min-height: 570px;
+}
 .promo-block-item img {
-    width: 100%;
+    max-width: 100%;
+}
+.promo-block-item a {
+	text-decoration: none;
+	color: #333;
 }
 
-.block-image {
+.block-video {
 	position: relative;
 	width: 100%;
-	height: 620px;
-	background-image: url("img/block-image.jpg");
-	background-repeat: no-repeat;
-    box-sizing: border-box;
     margin-top: 25px;
-    background-size: cover;
-}
-.block-image img {
-    position: absolute;
-    right: 5px;
-    top: 240px;
 }
 
+.news-block {
+	min-height: 490px;
+}
 .title-news {
 	text-transform: uppercase;
     font-size: 36px;
     color: #404040;
-    font-weight: normal;
+    font-weight: 100;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 35px;
@@ -354,15 +401,21 @@ header p {
 }
 .news-text-top {
 	font-size: 24px;
-	padding: 30px 0; 
+    font-weight: 300;
+    padding: 30px 0;
 }
 .news-text {
 	font-size: 16px;
-	padding-bottom: 30px; 
+    padding-bottom: 30px;
+    font-weight: 300;
 }
-.promo-block-item-title {
-	flex-basis: calc(100% / 3 - 40px);
+.news-element {
+	position: absolute;
+	bottom: 30px;
+    right: 52px;
+    color: #118bce;
 }
+
 .promo-block-title {
 	font-size: 36px;
 	text-transform: uppercase;
@@ -373,9 +426,28 @@ header p {
     margin-bottom: 35px;
 }
 
+.social-text-title {
+	margin-top: 30px;
+	font-size: 18px;
+	font-weight: 300;
+}
 .social-text {
 	margin-top: 30px;
+	font-size: 16px;
+	font-weight: 300;
 }
+.social-name {
+	font-size: 16px;
+	font-weight: 500;
+}
+.social-tag {
+	color: #0083ca;
+}
+
+.brend-block {
+	min-height: 450px;
+}
+
 .brend-text {
 	margin-top: 30px;
 	margin-bottom: 25px;
@@ -405,3 +477,4 @@ header p {
 .footer-item-center {
 	text-align: left;
 }
+
